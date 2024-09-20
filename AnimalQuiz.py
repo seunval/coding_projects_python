@@ -1,4 +1,4 @@
-"""A quiz game based on animals
+""" A quiz game based on animals
 The player is asked a few questions about animals and
 scores are given if passed
 """
