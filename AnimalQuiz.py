@@ -9,26 +9,30 @@ def check_guess(guess, answer):
     """
     global score  # identifies the score variable as nonlocal
     # sets the number of guesses per question
-    still_guessing = True
+    still_guessing = True # guess flag variable set to true
     attempt = 0
-    while still_guessing and attempt < 2:  # loop for num of guesses, maximum guess is 2
+    max_attempts = 2
+    while still_guessing and attempt < max_attempts:  # loop for num of guesses, maximum guess is 2
         if guess.lower() == answer.lower():  # compare guess to answer(and sets all inputs to lower case)
             print("Correct answer")
             # determines the point given per attempt
             score += 3 - attempt
             score += 1
-            still_guessing = False
+            still_guessing = False  # guess flag variable set to false to indicate end of loop            
         else:
             # calculates the number of attempts and prints a warning message
             if attempt < 1:
                 guess = input("Sorry wrong answer. Try again. ")
             attempt += 1
 # prints the correct answer after 2 attempts
-    if attempt == 2:
-        print("The correct answer is " + answer)
+        if attempt == max_attempts:
+            print("The correct answer is " + answer)
+        
+
+        
 
 
-score = 0  # used to keep track of the animal
+score = 0  # used to keep track of the score
 print("Guess the Animal!")  # Introduces the game to the player
 
 # main game area for the guessing
