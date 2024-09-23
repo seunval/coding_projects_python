@@ -11,8 +11,8 @@ def check_guess(guess, answer):
     # sets the number of guesses per question
     still_guessing = True
     attempt = 0
-    while still_guessing and attempt < 2:  # maximum guess is 2
-        if guess.lower() == answer.lower():
+    while still_guessing and attempt < 2:  # loop for num of guesses, maximum guess is 2
+        if guess.lower() == answer.lower():  # compare guess to answer(and sets all inputs to lower case)
             print("Correct answer")
             # determines the point given per attempt
             score += 3 - attempt
